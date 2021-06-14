@@ -1,0 +1,16 @@
+name = "pit-notify"
+type = "javascript"
+
+account_id = "your account id"
+workers_dev = true
+route = ""
+zone_id = ""
+webpack_config = "webpack.config.js"
+kv_namespaces = [ { binding = "kv", id = "your kv namespace", preview_id = "your kv dev namespace" } ]
+
+[build]
+upload.format = "service-worker"
+command = "npm run build"
+
+[triggers]
+crons = ["* * * * *"]
